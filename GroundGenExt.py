@@ -118,8 +118,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			return False
 	def RestartAllCustomNodes(self):
 		op.GGenLogger.Info('Restarting all custom nodes')
-		for node in op.GGen.op('custom_operators').findChildren(tags=['GGen2d','GGen3d']):
-			node.op('Startup').par.startpulse.pulse()
+		for node in op.GGen.op('custom_operators').findChildren(tags=['GGen2d','GGen3d','GGenOut'], depth=1):
+			#print('Restarting node: ' + str(node))
+			if node.op('Startup') is not None:
+				node.op('Startup').par.startpulse.pulse()
 
 	def OnSave(self):
 		op.GGenLogger.Info('Saving GroundGenExt state')

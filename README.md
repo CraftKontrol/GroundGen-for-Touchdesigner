@@ -1,5 +1,5 @@
 ﻿#GGEN - POP Terrain Generator for TouchDesigner
-#Version 0.25
+#Version 0.266
 ![GGEN System Overview](Assets/System/GGen_alpha.png)
 
 **GGEN** aka (Gégène) is a modular POP (point operator) based procedural terrain generation toolkit for TouchDesigner that lets you build and iterate on believable landscapes by chaining 3D and 2D operators (noise, shape, terraces, erosion, cavities, slope, snow, beaches, etc.).
